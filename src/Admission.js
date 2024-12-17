@@ -697,10 +697,6 @@ function Admission() {
             ))}
           </form>
         </div>
-     
-         <button type="button" onClick={handlePrint} className="print-btn">
-         Print
-       </button>
        </>
       )}
      
