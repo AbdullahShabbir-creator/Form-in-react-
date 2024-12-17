@@ -1,4 +1,3 @@
-// src/controllers/admissionController.js
 const Admission = require('../Models/Admission');
 
 exports.createAdmission = async (req, res) => {
