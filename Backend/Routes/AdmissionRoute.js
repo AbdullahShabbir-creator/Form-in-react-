@@ -16,19 +16,15 @@ router.post('/post', async (req, res) => {
         guardianname, 
         guardianrelation, 
         postaladdress,
-        ssc,  // SSC details
-        hssc,  // HSSC details
-        choices: [{  // Array of choice objects
+        ssc,  
+        hssc,  
+        choices: [{  
             discipline,
             shift
-        }]  // Order of Choice details
+        }]  
     } = req.body;
 
     try {
-        // Check if the email or phone already exists in the database
-        // 
-
-        // Create a new admission with all the fields, including orderChoices
         const admission = new Admission({
             fullname,
             email,
@@ -49,8 +45,6 @@ router.post('/post', async (req, res) => {
                 shift
             }] 
         });
-
-        // Save the admission record to the database
         await admission.save();
 
         res.status(201).json({ message: 'Admission saved successfully!' });

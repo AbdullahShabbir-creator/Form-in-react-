@@ -36,7 +36,6 @@ function Admission() {
       { order: 3, discipline: '', shift: '' },
     ],
   });
-  const formRef = useRef(null);
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -114,7 +113,7 @@ function Admission() {
         [category]: {
           ...formData[category],
           [field]: value,
-          
+
         },
       });
     } else if (nameParts.length === 3) {
@@ -133,31 +132,6 @@ function Admission() {
     }
   };
 
-  const handlePrint = () => {
-    const printContent = formRef.current; // Access the form using ref
-    if (printContent) {
-      const printWindow = window.open('', '', 'width=800,height=600');
-      printWindow.document.write('<html><head><title>Submitted Data</title>');
-      
-      // Add minimal styling to remove any styling, like background, margins, and borders
-      printWindow.document.write(`
-        <style>
-          body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-          input, label { border: none; background: none; font-size: 14px; }
-          .form-row { margin-bottom: 10px; }
-        </style>
-      `);
-      
-      printWindow.document.write('</head><body>');
-      printWindow.document.write(printContent.innerHTML); // Write the form content to the print window
-      printWindow.document.write('</body></html>');
-      
-      printWindow.document.close();
-      printWindow.print(); // Trigger print
-    } else {
-      console.error("Form not found!");
-    }
-  };
   
   return (
     <div className="form-container">
@@ -498,9 +472,9 @@ function Admission() {
       </form>
       {submittedData && (
         <>
-        {/* <div className="submitted-data">
+        <div className="submitted-data">
           <h2>Submitted Data</h2>
-          <form ref={formRef} className="admission-form read-only-form">
+          <form className="admission-form read-only-form">
             <div className="form-row">
               <label htmlFor="fullname">Full Name:</label>
               <input
@@ -517,7 +491,7 @@ function Admission() {
                 name="email"
                 value={submittedData.email}
                 readOnly
-              /> */}
+              />
             </div>
             <div className="form-row">
               <label htmlFor="fathername">Father's Name:</label>
