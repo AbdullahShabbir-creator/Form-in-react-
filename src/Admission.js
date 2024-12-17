@@ -177,7 +177,7 @@ function Admission() {
             name="cnic"
             value={formData.cnic}
             onChange={handleChange}
-            placeholder="Enter CNIC"
+            placeholder="Enter CNIC(withoutdashes)"
           />
         </div>
 
@@ -188,7 +188,7 @@ function Admission() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            placeholder="Enter Phone Number"
+            placeholder="Enter Phone Number(withoutdashes)"
           />
         </div>
 
