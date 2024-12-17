@@ -100,7 +100,7 @@ function Admission() {
   const handleChange = (e) => {
     const { name, value } = e.target;
     const nameParts = name.split('.');
-
+ 
     if (nameParts.length === 1) {
       setFormData({
         ...formData,
@@ -114,6 +114,7 @@ function Admission() {
         [category]: {
           ...formData[category],
           [field]: value,
+          
         },
       });
     } else if (nameParts.length === 3) {
