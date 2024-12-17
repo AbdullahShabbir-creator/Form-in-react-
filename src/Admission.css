@@ -1,0 +1,126 @@
+.tiltle{
+  text-align: center;
+}
+.form-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    /* background-color: blanchedalmond; */
+    margin: 0 auto;
+  }
+ 
+  .admission-form {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .form-row label {
+    margin-right: 10px;
+    width: 150px; 
+    font-family: -webkit-body;
+    font-size:medium;
+  }
+  
+  .form-row input,
+  .form-row textarea {
+    width:70%;
+    padding: 8px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin: 9px;
+  }
+  
+  .qualification-table {
+    width: 93%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .qualification-table th,
+  .qualification-table td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .qualification-table input {
+    width: 64%;
+    margin: 2px;
+    padding: 9px;
+    font-size: 14px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  .btn{
+    width: 93%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .form-actions{
+    display: flex;
+    text-align: right;
+    width: 84%;
+    margin-top: 29px;
+  }
+  .submit-btn{
+    margin-left: 255px;
+  }
+  .submitted-data {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .submitted-data h2 {
+    margin-bottom: 10px;
+  }
+  
+  .submitted-data p {
+    margin: 5px 0;
+    line-height: 1.6;
+  }
+  
+  .submitted-data table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .submitted-data table th,
+  .submitted-data table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .submitted-data table th {
+    background-color: #f2f2f2;
+  }
+  .choic{
+    width: 56%;
+    margin: 2px;
+    padding: 4px;
+    font-size: 11px;
+  }
